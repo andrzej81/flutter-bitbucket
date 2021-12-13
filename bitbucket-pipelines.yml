@@ -12,6 +12,10 @@ pipelines:
           name: 'Build and Test'
           script:
             - echo "Your build and test goes here..."
+            - echo "Building APK..."
+            - flutter doctor
+            - flutter test
+            - flutter -v build apk
       - step:
           name: 'Lint'
           script:
@@ -28,6 +32,7 @@ pipelines:
         script:
           - echo "Building APK..."
           - flutter doctor
+          - flutter test
           - flutter -v build apk
     - step:
         name: 'Deployment to Production'
