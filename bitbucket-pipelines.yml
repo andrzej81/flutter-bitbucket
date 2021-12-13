@@ -1,4 +1,4 @@
-image: androidsdk/android-30
+image: cirrusci/flutter:stable
 
 pipelines:
   default:
