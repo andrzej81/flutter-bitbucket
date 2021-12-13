@@ -9,7 +9,7 @@ pipelines:
           - flutter
         script:
           - echo "Building APK..."
-          - flutter upgrade
+          #- flutter upgrade
           - flutter doctor
           - flutter -v build apk
 
