@@ -19,6 +19,7 @@ pipelines:
           name: 'Lint'
           script:
             - echo "Your linting goes here..."
+            - flutter analyze
       - step:
           name: 'Security scan'
           script:
