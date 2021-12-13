@@ -12,10 +12,14 @@ pipelines:
           name: 'Build and Test'
           script:
             - echo "Your build and test goes here..."
+            - echo "Building APK..."
+            - flutter doctor
+            - flutter test
       - step:
           name: 'Lint'
           script:
             - echo "Your linting goes here..."
+            - flutter analyze
       - step:
           name: 'Security scan'
           script:
@@ -26,8 +30,7 @@ pipelines:
         name: 'Deployment to Staging'
         deployment: staging
         script:
-          - echo "Building APK..."
-          - flutter doctor
+          - echo "Building release APK..."
           - flutter -v build apk
     - step:
         name: 'Deployment to Production'
@@ -35,3 +38,4 @@ pipelines:
         trigger: 'manual'
         script:
           - echo "Your deployment to production script goes here..."
+          - flutter build apk

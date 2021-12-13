@@ -1,1 +1,5 @@
-# Flutter mobile app with pipeline configuration for bitbucket
+# Flutter mobile app with CI/CD
+
+- bitbucket pipeline configuration
+- unit test
+- widget test
